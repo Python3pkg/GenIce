@@ -4,7 +4,7 @@
 ####Note: xyz are in coord relative to the cell.
 
 
-from __future__ import print_function
+
 import math
 import itertools as it
 import numpy as np
@@ -107,7 +107,7 @@ def pairlist_fine(xyz,rc,cell,grid,distance=True):
 
 def pairlist_crude(xyz,rc,cell,distance=True):
     newpairs = set()
-    for i,j in it.combinations(range(len(xyz)),2):
+    for i,j in it.combinations(list(range(len(xyz))),2):
         moli = xyz[i]
         molj = xyz[j]
         d = moli-molj
